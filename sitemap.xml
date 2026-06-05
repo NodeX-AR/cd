@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://chill-domain.duckdns.org/</loc>
+    <loc>https://chill-domain.cc.cd/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://chill-domain.duckdns.org/?page=live</loc>
+    <loc>https://chill-domain.cc.cd/?page=live</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chill-domain.duckdns.org/?page=activity</loc>
+    <loc>https://chill-domain.cc.cd/?page=activity</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chill-domain.duckdns.org/?page=about</loc>
+    <loc>https://chill-domain.cc.cd/?page=about</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
