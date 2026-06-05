@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#090A0F">
+    <title>Chill Domain — Live Discord Community | Real Members, Voice Chat, No Bots</title>
+    <meta name="description" content="Join Chill Domain — a live Discord server with real members, active voice channels, and zero spam. See live member counts and online users. Click to join now.">
+    <meta name="keywords" content="Discord, Discord server, live community, voice chat, gaming community, study group, online friends, active members, Chill Domain, join Discord, best Discord servers, Discord invite, indian, discord minecraft, indian discord">
+    <meta name="author" content="Chill Domain">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://discord.gg/JDgxbz88S6">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Chill Domain — Live Discord Community">
+    <meta property="og:description" content="Real members, active voice, honest conversations. Join a server that actually moves.">
+    <meta property="og:image" content="https://cdn.discordapp.com/icons/1312382239870685215/a_6e0b8f0c9b1c3a8f2e5d4a6b7c8d9e0f.gif?size=512">
+    <meta property="og:url" content="https://discord.gg/JDgxbz88S6">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chill Domain">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chill Domain — Live Discord Community">
+    <meta name="twitter:description" content="Live member stats, voice channels, real people. Join now.">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/icons/1312382239870685215/a_6e0b8f0c9b1c3a8f2e5d4a6b7c8d9e0f.gif?size=512">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #090A0F;
+            color: #EFF3FC;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Animated background blobs */
+        .bg-blob {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: #090A0F;
+        }
+        .blob-1, .blob-2 {
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            animation: float 20s infinite alternate;
+        }
+        .blob-1 {
+            background: #2D3B6E;
+            top: -20vh;
+            left: -20vw;
+        }
+        .blob-2 {
+            background: #4F3B6E;
+            bottom: -30vh;
+            right: -20vw;
+            animation-delay: -5s;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(5%, 5%) scale(1.2); }
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .hero-left {
+            flex: 2;
+        }
+        .hero-right {
+            flex: 1;
+            min-width: 200px;
+        }
+        .server-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 24px;
+            background: #1E2438;
+            margin-bottom: 1rem;
+            border: 2px solid #5865F2;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(125deg, #FFFFFF, #B4C0FF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        .server-desc {
+            font-size: 1rem;
+            color: #A5B0CC;
+            max-width: 500px;
+            margin: 0.5rem 0 1.5rem;
+        }
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(46, 204, 113, 0.15);
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #2ECC71;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #2ECC71;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            background: rgba(18, 22, 35, 0.6);
+            backdrop-filter: blur(12px);
+            border-radius: 1.5rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: 0.2s;
+        }
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8F97B0;
+            margin-top: 0.2rem;
+        }
+
+        /* Split Layout */
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+        .feature-marker {
+            width: 4px;
+            height: 4px;
+            background: #5865F2;
+            border-radius: 2px;
+        }
+        .pill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        .pill {
+            background: rgba(45, 52, 85, 0.5);
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #5865F2;
+            color: white;
+            border: none;
+            border-radius: 60px;
+            padding: 0.9rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s;
+            box-shadow: 0 8px 20px rgba(88,101,242,0.3);
+            width: 100%;
+        }
+        .cta-button:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+        }
+
+        /* Activity Feed */
+        .activity-feed {
+            background: rgba(0,0,0,0.3);
+            border-radius: 1.2rem;
+            padding: 1rem;
+            font-family: monospace;
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .feed-line {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            color: #8F97B0;
+        }
+
+        /* Floating Join Button */
+        .floating-join {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #5865F2;
+            padding: 0.7rem 1.5rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.2s;
+            text-decoration: none;
+            color: white;
+        }
+        .floating-join:hover {
+            transform: scale(1.02);
+            background: #4752C4;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #2A2F45, transparent);
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .stats-grid {
+                gap: 0.8rem;
+            }
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            .split {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .hero {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-blob">
+    <div class="blob-1"></div>
+    <div class="blob-2"></div>
+</div>
+
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-left">
+            <img id="serverIcon" class="server-icon" alt="Chill Domain Server Icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%235865F2'/%3E%3Ctext x='40' y='55' font-size='38' text-anchor='middle' fill='white' font-weight='bold'%3Eℂ%3C/text%3E%3C/svg%3E">
+            <h1 id="serverName">Chill Domain</h1>
+            <div class="server-desc" id="serverDesc">Loading live community data...</div>
+            <div class="live-badge"><span class="live-dot"></span> Live Community · Data Updates Every 15 Seconds</div>
+        </div>
+        <div class="hero-right">
+            <div class="stat-card">
+                <div class="stat-number" id="onlineCount">—</div>
+                <div class="stat-label">Online Now</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number" id="memberCount">—</div>
+            <div class="stat-label">Total Members</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="boostCount">—</div>
+            <div class="stat-label">Server Boosts</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="featureCount">—</div>
+            <div class="stat-label">Active Features</div>
+        </div>
+    </div>
+
+    <!-- Main Content Split -->
+    <div class="split">
+        <div>
+            <h3 style="font-weight: 600; margin-bottom: 1rem;">✦ Why Join Chill Domain?</h3>
+            <div class="feature-list">
+                <div class="feature-item"><span class="feature-marker"></span> Active Voice Channels — Daily Hangouts</div>
+                <div class="feature-item"><span class="feature-marker"></span> Friendly, Real Moderation — No Toxicity</div>
+                <div class="feature-item"><span class="feature-marker"></span> Zero Spam — Just Real People</div>
+                <div class="feature-item"><span class="feature-marker"></span> Live Stats — What You See Is Real</div>
+                <div class="feature-item"><span class="feature-marker"></span> Gaming, Tech, Art, And General Chat</div>
+            </div>
+            <div class="pill-group" id="featurePills"></div>
+        </div>
+        <div>
+            <a id="mainJoinBtn" class="cta-button" href="https://discord.gg/JDgxbz88S6" target="_blank" rel="noopener">
+                Join Chill Domain Now →
+            </a>
+            <div class="activity-feed" id="activityFeed">
+                <div class="feed-line">> Initializing Connection To Discord API</div>
+            </div>
+            <div style="font-size: 0.7rem; color: #6E7694; margin-top: 0.5rem; text-align: center;" id="timestamp"></div>
+        </div>
+    </div>
+    <hr>
+    <div style="text-align: center; font-size: 0.7rem; color: #5A627A;">
+        Data Fetched Live From Discord API · Refreshed Every 15 Seconds · No Caching, No Inflation
+    </div>
+</div>
+
+<!-- Floating Join Button -->
+<a id="floatingJoinBtn" class="floating-join" href="https://discord.gg/JDgxbz88S6" target="_blank" rel="noopener">Join Discord →</a>
+
+<script>
+    const INVITE_CODE = 'JDgxbz88S6';
+    const API_URL = `https://discord.com/api/v10/invites/${INVITE_CODE}?with_counts=true`;
+
+    // DOM Elements
+    const serverIcon = document.getElementById('serverIcon');
+    const serverNameSpan = document.getElementById('serverName');
+    const serverDescSpan = document.getElementById('serverDesc');
+    const memberCountSpan = document.getElementById('memberCount');
+    const onlineCountSpan = document.getElementById('onlineCount');
+    const boostCountSpan = document.getElementById('boostCount');
+    const featureCountSpan = document.getElementById('featureCount');
+    const featurePillsDiv = document.getElementById('featurePills');
+    const activityFeed = document.getElementById('activityFeed');
+    const timestampDiv = document.getElementById('timestamp');
+
+    let activityLog = ['🟢 Session Started — Fetching Live Data From Discord'];
+    let lastUpdate = null;
+
+    function formatTime() {
+        return new Date().toLocaleTimeString([], { hour: '2-digit', minute:'2-digit', second:'2-digit' });
+    }
+
+    function addLogEntry(msg) {
+        activityLog.unshift(`[${formatTime()}] ${msg}`);
+        if (activityLog.length > 8) activityLog.pop();
+        renderFeed();
+    }
+
+    function renderFeed() {
+        if (!activityFeed) return;
+        activityFeed.innerHTML = activityLog.map(m => `<div class="feed-line">> ${escapeHtml(m)}</div>`).join('');
+    }
+
+    function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function(c) {
+            if (c === '&') return '&amp;';
+            if (c === '<') return '&lt;';
+            if (c === '>') return '&gt;';
+            return c;
+        });
+    }
+
+    function getIconUrl(guildId, iconHash) {
+        if (!iconHash) return null;
+        const ext = iconHash.startsWith('a_') ? 'gif' : 'png';
+        return `https://cdn.discordapp.com/icons/${guildId}/${iconHash}.${ext}?size=256`;
+    }
+
+    async function fetchLiveData(manual = false) {
+        try {
+            const res = await fetch(API_URL, { cache: 'no-store' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            const guild = data.guild;
+            if (!guild) throw new Error('No Guild Data Received');
+
+            const total = data.approximate_member_count ?? guild.approximate_member_count ?? '?';
+            const online = data.approximate_presence_count ?? '?';
+            const boosts = guild.premium_subscription_count ?? 0;
+            const name = guild.name || 'Chill Domain';
+            const description = guild.description || 'A Real, Active Community. No Fluff, No Bots.';
+            const iconUrl = guild.icon ? getIconUrl(guild.id, guild.icon) : null;
+            const features = guild.features || [];
+
+            // Update UI
+            serverNameSpan.innerText = name;
+            serverDescSpan.innerText = description;
+            memberCountSpan.innerText = total !== '?' ? total.toLocaleString() : '?';
+            onlineCountSpan.innerText = online !== '?' ? online.toLocaleString() : '?';
+            boostCountSpan.innerText = boosts;
+            featureCountSpan.innerText = features.length;
+
+            if (iconUrl) {
+                serverIcon.src = iconUrl;
+                serverIcon.onerror = () => {
+                    serverIcon.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%235865F2'/%3E%3Ctext x='40' y='55' font-size='38' text-anchor='middle' fill='white' font-weight='bold'%3Eℂ%3C/text%3E%3C/svg%3E";
+                };
+            }
+
+            featurePillsDiv.innerHTML = '';
+            (features.slice(0, 6)).forEach(f => {
+                const pill = document.createElement('span');
+                pill.className = 'pill';
+                pill.innerText = f.replace(/_/g, ' ').toLowerCase();
+                featurePillsDiv.appendChild(pill);
+            });
+            if (features.length === 0) {
+                featurePillsDiv.innerHTML = '<span class="pill">Active Community</span><span class="pill">Voice Culture</span><span class="pill">Friendly Mods</span>';
+            }
+
+            lastUpdate = new Date();
+            timestampDiv.innerText = `Last Fetch: ${formatTime()}`;
+            const tStr = total !== '?' ? total.toLocaleString() : '?';
+            const oStr = online !== '?' ? online.toLocaleString() : '?';
+            addLogEntry(`${manual ? 'Manual Refresh' : 'Auto Refresh'} → ${tStr} Members, ${oStr} Online`);
+        } catch (err) {
+            console.error(err);
+            addLogEntry(`⚠️ Error: ${err.message}`);
+            timestampDiv.innerText = `Error: ${err.message}`;
+        }
+    }
+
+    // Initial Fetch + Auto Refresh Every 15 Seconds
+    fetchLiveData();
+    setInterval(() => fetchLiveData(false), 15000);
+</script>
+</body>
+</html>
