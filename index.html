@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#090A0F">
-    <title>Chill Domain — Live Discord Community | Real Members, Voice Chat, No Bots</title>
+    <meta name="theme-color" content="#5865F2">
+    <title>Chill Domain | Join Now</title>
     <meta name="description" content="Join Chill Domain — a live Discord server with real members, active voice channels, and zero spam. See live member counts and online users. Click to join now.">
     <meta name="keywords" content="Discord, Discord server, live community, voice chat, gaming community, study group, online friends, active members, Chill Domain, join Discord, best Discord servers, Discord invite, indian, discord minecraft, indian discord">
     <meta name="author" content="Chill Domain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://discord.gg/JDgxbz88S6">
     
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Chill Domain — Live Discord Community">
-    <meta property="og:description" content="Real members, active voice, honest conversations. Join a server that actually moves.">
+    <!-- Open Graph / Discord / Twitter -->
+    <meta property="og:title" content="Chill Domain — Live Discord Server">
+    <meta property="og:description" content="Real members, active voice, honest conversations. Join a server that actually talks. Live stats inside.">
     <meta property="og:image" content="https://cdn.discordapp.com/icons/1312382239870685215/a_6e0b8f0c9b1c3a8f2e5d4a6b7c8d9e0f.gif?size=512">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
     <meta property="og:url" content="https://discord.gg/JDgxbz88S6">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Chill Domain">
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Chill Domain — Live Discord Community">
-    <meta name="twitter:description" content="Live member stats, voice channels, real people. Join now.">
+    <meta name="twitter:description" content="Active voice, real people, zero spam. Join over 300+ members.">
     <meta name="twitter:image" content="https://cdn.discordapp.com/icons/1312382239870685215/a_6e0b8f0c9b1c3a8f2e5d4a6b7c8d9e0f.gif?size=512">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -56,9 +57,9 @@
             width: 60vw;
             height: 60vw;
             border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.4;
-            animation: float 20s infinite alternate;
+            filter: blur(120px);
+            opacity: 0.5;
+            animation: float 25s infinite alternate;
         }
         .blob-1 {
             background: #2D3B6E;
@@ -69,7 +70,7 @@
             background: #4F3B6E;
             bottom: -30vh;
             right: -20vw;
-            animation-delay: -5s;
+            animation-delay: -8s;
         }
         @keyframes float {
             0% { transform: translate(0, 0) scale(1); }
@@ -81,6 +82,32 @@
             margin: 0 auto;
             padding: 2rem 2rem 4rem;
             position: relative;
+        }
+
+        /* Animated border for main container (optional, but cool) */
+        .animated-border {
+            position: relative;
+            background: rgba(12, 15, 28, 0.6);
+            backdrop-filter: blur(16px);
+            border-radius: 2rem;
+            padding: 2px; /* space for the gradient border */
+        }
+        .animated-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 2rem;
+            padding: 2px;
+            background: conic-gradient(from 0deg, #5865F2, #A5B4FC, #818CF8, #5865F2);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: spin 3s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
         }
 
         /* Hero Section */
@@ -100,19 +127,24 @@
             min-width: 200px;
         }
         .server-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 24px;
+            width: 88px;
+            height: 88px;
+            border-radius: 28px;
             background: #1E2438;
             margin-bottom: 1rem;
             border: 2px solid #5865F2;
             object-fit: cover;
+            box-shadow: 0 15px 30px -10px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+        .server-icon:hover {
+            transform: scale(1.02);
         }
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
-            background: linear-gradient(125deg, #FFFFFF, #B4C0FF);
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #FFFFFF, #A5B4FC, #818CF8);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -156,12 +188,33 @@
             margin: 2rem 0;
         }
         .stat-card {
+            position: relative;
             background: rgba(18, 22, 35, 0.6);
             backdrop-filter: blur(12px);
             border-radius: 1.5rem;
             padding: 1.2rem;
             border: 1px solid rgba(255,255,255,0.06);
-            transition: 0.2s;
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+        /* Animated border on stat cards */
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            padding: 1px;
+            background: conic-gradient(from 0deg, #5865F2, #A5B4FC, #818CF8, #5865F2);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: spin 4s linear infinite;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        .stat-card:hover::before {
+            opacity: 1;
         }
         .stat-number {
             font-size: 2.8rem;
@@ -318,7 +371,7 @@
             <img id="serverIcon" class="server-icon" alt="Chill Domain Server Icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%235865F2'/%3E%3Ctext x='40' y='55' font-size='38' text-anchor='middle' fill='white' font-weight='bold'%3Eℂ%3C/text%3E%3C/svg%3E">
             <h1 id="serverName">Chill Domain</h1>
             <div class="server-desc" id="serverDesc">Loading live community data...</div>
-            <div class="live-badge"><span class="live-dot"></span> Live Community · Data Updates Every 15 Seconds</div>
+            <div class="live-badge"><span class="live-dot"></span> Live Community</div>
         </div>
         <div class="hero-right">
             <div class="stat-card">
@@ -362,14 +415,14 @@
                 Join Chill Domain Now →
             </a>
             <div class="activity-feed" id="activityFeed">
-                <div class="feed-line">> Initializing Connection To Discord API</div>
+                <div class="feed-line">> Initializing Connection </div>
             </div>
             <div style="font-size: 0.7rem; color: #6E7694; margin-top: 0.5rem; text-align: center;" id="timestamp"></div>
         </div>
     </div>
     <hr>
     <div style="text-align: center; font-size: 0.7rem; color: #5A627A;">
-        Data Fetched Live From Discord API · Refreshed Every 15 Seconds · No Caching, No Inflation
+        Made By Aswanth R (NodeX-AR) 
     </div>
 </div>
 
